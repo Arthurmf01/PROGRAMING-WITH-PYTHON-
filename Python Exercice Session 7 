@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 19 09:09:47 2018
+
+@author: arthurmaroquenefroissart
+"""
+
+#%%
+
+#Class 7 Exercice : definir une fonction aui retourne la variable dans la liste 
+
+lst = [3,4,76,7]
+    
+def linear (lst,num):                       #ne pas oublier le len & range pour la position dans UNE LSITE  
+    for i in range(len(lst)):               
+        if lst[i]==num:                     
+            return i                        #toujours efficace de retourner l'index dans ce genre de cas. 
+#%%
+
+    
+#%% correction. retouner position d'un index en fonction d'une liste 
+    
+lst = [3,5,6,8,23,6,9]
+    
+def binary (elem,lst): 
+    low = 0 
+    high = len(lst)-1
+    
+    while low<= high: 
+        mid = (low + high)//2 
+        if lst[mid]> elem:
+            high = mid -1 
+        elif lst [mid]< elem : 
+            low = mid + 1 
+        else : 
+            return mid
+        
+    return None 
+    
+    

@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 16 08:16:23 2018
+
+@author: arthurmaroquenefroissart
+"""
+#1.Create a function that receives a text and returns the frequency of
+#each word in the text (as a dictionary).
+#%%
+
+text = "en el lugar de la mancha de la mancha de" 
+
+#%%
+
+def get_frequencies(text) : 
+    words = text.split()
+    frequencies = {}
+    
+    for word in words : 
+        if word in frequencies : 
+            frequencies [word] = frequencies [word] + 1 
+        else : 
+            frequencies[word] = 1
+            
+    return frequencies 
+
+#%%
+#2. Create a function that uses the previously generated dictionary and
+ #  prints a bars diagram of the frequencies.  For example, the
+  # following:
+
+   #+BEGIN_SRC 
+  # dictionary = {"a": 4, "hello": 1, "world": 3, "another": 2}
+  # diagram(dictionary)
+   #+END_SRC 
+
+   #should print:
+
+   #+BEGIN_SRC 
+   #a       | ****
+   #hello   | *
+   #world   | ***
+   #another | **
+   #+END_SRC   
+   
+#%%
+
+
+def histogram(sentence):
+    frequencies = get_frequencies(sentence)
+    
+    longest_word = max(sentence.split(), key = len)
+    
+    for i in frequencies :
+        length = len(i)
+        spaces = " " * ((len(longest_word) - length) + 2) 
+        
+        print(i + spaces + " | " + frequencies[] * "*")
+        
+
+#%%
+   
+
+3. re-implement the phonebook example using a dictionary instead of
+   two lists.

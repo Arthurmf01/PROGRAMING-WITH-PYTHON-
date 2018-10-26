@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 10 14:12:40 2018
+
+@author: arthurmaroquenefroissart
+"""
+
+#1 Workgroup assignment 1
+#Welcome to the first workgroup session. Today you’ll work in groups in class 
+#to finish the following exercises. If you can’t finish these exercises today, 
+#you’ll have some more time during the week. The due date for these exercises 
+#is Friday 12-10-2018 at 20:00 P.M.
+#For the submission, make sure that you submit one Python text file with all
+# the answers.
+
+#2 Exercises
+
+#1. Create a function histogram that, given a list of integers, 
+#prints the histogram for them. 
+#For example, the histogram for [3, 2, 5] would be:
+
+#%%
+
+my_list = []
+def histogram (my_list):
+    for i in my_list :
+        result = ""
+        while i > 0:
+            result = result + "*"
+            i = i - 1
+        print (result)
+         
+
+#2. Create a function is_palindrome that receives a string and returns if 
+#the string is a palindrome. For example is_palindrome(’radar’) would return 
+#True, and is_palindrome(’potato’), False.
+#3. Create a is_palindrome_enhanced function so it can handle 
+#more cases such as palindromes containing spaces, single quotes, 
+#commas, and dots. Both of the following would be true:
+#is_palindrome_enhanced(’dabale arroz a la zorra el abad’)
+#is_palindrome_enhanced("madam i’m adam")
+        
+#4. Create a function reverse that takes a string as a parameter and returns 
+#it reversed. In this case you should be treating the string as a list of characters.
+#reverse("potato") should return "otatop" 1
+
+#%%
+        
+vegetable = 'potato'
+index = 0 
+while index < len(vegetable):
+    print (vegetable[index])
+    index = index +1     
+        
+        
+#%% 
+        
+#1. Create a function that returns the Collatz sequence of a number. 
+#The collatz sequence is the sequence of numbers that follow these rules:
+#• if the number is negative, return an empty list
+#• if the number is even, divide the number by two
+#• if the number is odd, multiply the number by three and then sum one.
+#The iteration should stop when the number reaches to 1. examples:
+#collatz(1) == [1]
+#collatz(2) == [2, 1]
+#collatz(3) == [3, 10, 5, 16, 8, 4, 2, 1]
+#You can find more information about the Collatz sequence & the Col- latz 
+#conjecture here: https://www.youtube.com/watch?v=5mFpVDpKX70
